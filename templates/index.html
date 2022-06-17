@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Howasle</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.css') }}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,500|Poppins:400,600,700&display=swap"
+    rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{{ url_for('static',filename='css/responsive.css') }}" rel="stylesheet" />
+  <!-- ICON -->
+  <link rel="icon" href="{{ url_for('static',filename='images/favicon-32x32.png') }}">
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="/">
+            <span> Howasle </span>
+          </a>
+
+          <div class="navbar-collapse" id="">
+
+            <div class="custom_menu-btn">
+              <button onclick="openNav()">
+                <span class="s-1"> </span>
+                <span class="s-2"> </span>
+                <span class="s-3"> </span>
+              </button>
+            </div>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="/">HOME</a>
+                <a href="/services">SERVICES</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section position-relative">
+      <div class="row m-0">
+        <div class="col-md-3 offset-md-2">
+          <div class="slider_detail">
+            <h1>
+              <span> HOWASLE</span>
+              SOLUTIONS
+            </h1>
+            <p class="h5">
+              Selamat Datang di <b class="text-dark">Howasle</b>
+              dimana sampah dapat dibuat menjadi sebuah kreasi
+            </p>
+            <div>
+              <a href="services"> Try it Now </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="slider_img-box">
+            <img src="{{ url_for('static',filename='images/slider-img.png') }}" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end slider section -->
+  </div>
+
+  <!-- portfolio section -->
+  <section class="portfolio_section layout_padding2">
+    <div class="row m-0">
+      <div class="col-md-6">
+        <div class="slider_img-box">
+          <img src="{{ url_for('static',filename='images/dashboard2.jpeg') }}" alt="" class="rounded"
+            style="width: 600px; height: 800px">
+        </div>
+      </div>
+      <div class="col-md-6 my-auto">
+        <div class="slider_detail">
+          <h1 class="text-dark">
+            <span> HOWASLE</span>
+            SOLUTIONS
+          </h1>
+          <p class="text-dark text-justify h5">
+            <b>Howasle</b> adalah aplikasi berbasis website yang digunakan untuk klasifikasi sampah limbah rumah tangga
+            yang
+            dapat membantu masyarakat
+            mengklasifikasikan sampah berdasarkan jenisnya yang kemudian ditampilkan saran cara membuang atau mengolah
+            sampah menjadi
+            produk yang memiliki nilai ekonomis. Sampah limbah rumah tangga yang diklasifikasikan khusus nya adalah B3
+            dan anorganik, karena sampah
+            tersebut susah terurai dan sangat mencemari lingkungan terutama ekosistem tanah. Sehingga harapan dari
+            howasle membantu masyarakat agar
+            dapat mengurangi pencemaran lingkungan
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end portfolio section -->
+
+  <!-- team section  -->
+  <section class="team_section layout_padding">
+    <div class="container">
+      <h2>TIM KAMI</h2>
+    </div>
+    <div class="container">
+      <div class="team_card-container layout_padding2">
+        <div class="team_card">
+          <div class="team_img-box">
+            <img src="{{ url_for('static',filename='images/team-3.png') }}" alt="" />
+          </div>
+          <div class="team_detail-box">
+            <h5>Hasnaa Labiibah</h5>
+            <p>Universitas Amikom Purwokerto</p>
+          </div>
+        </div>
+        <div class="team_card">
+          <div class="team_img-box">
+            <img src="{{ url_for('static',filename='images/team-1.png') }}" alt="" />
+          </div>
+          <div class="team_detail-box">
+            <h5>Ade Candra Oktaviandi</h5>
+            <p>Sekolah Tinggi Teknologi Bandung</p>
+          </div>
+        </div>
+        <div class="team_card">
+          <div class="team_img-box">
+            <img src="{{ url_for('static',filename='images/team-2.png') }}" alt="" />
+          </div>
+          <div class="team_detail-box">
+            <h5>Dekha Putra Anreihan</h5>
+            <p>Universitas Pancasila</p>
+          </div>
+        </div>
+        <div class="team_card">
+          <div class="team_img-box">
+            <img src="{{ url_for('static',filename='images/team-4.png') }}" alt="" />
+          </div>
+          <div class="team_detail-box">
+            <h5>Annisa Rusydah</h5>
+            <p>Sekolah Tinggi Teknologi Terpadu Nurul Fikri</p>
+          </div>
+        </div>
+        <div class="team_card">
+          <div class="team_img-box">
+            <img src="{{ url_for('static',filename='images/team-1.png') }}" alt="" />
+          </div>
+          <div class="team_detail-box">
+            <h5>Pernando</h5>
+            <p>Sekolah Tinggi Teknologi Wastukancana</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end team section -->
+
+  <!-- end why section -->
+
+  <!-- info section -->
+
+
+  <!-- end info section -->
+  <!-- footer section -->
+  <!-- footer section -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").classList.toggle("menu_width");
+      document
+        .querySelector(".custom_menu-btn")
+        .classList.toggle("menu_btn-style");
+    }
+  </script>
+</body>
+
+</html>

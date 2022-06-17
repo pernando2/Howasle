@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Howasle</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.css') }}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,500|Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{{ url_for('static',filename='css/responsive.css') }}" rel="stylesheet" />
+
+  <link rel="icon" href="{{ url_for('static',filename='images/favicon-32x32.png') }}">
+</head>
+
+<body class="sub_page">
+
+  <body class="">
+    <div class="hero_area">
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="/">
+              <span>
+                Howasle
+              </span>
+            </a>
+
+            <div class="navbar-collapse" id="">
+              <div class="d-none d-lg-flex ml-auto flex-column flex-lg-row align-items-center">
+              </div>
+
+              <div class="custom_menu-btn">
+                <button onclick="openNav()">
+                  <span class="s-1">
+
+                  </span>
+                  <span class="s-2">
+
+                  </span>
+                  <span class="s-3">
+
+                  </span>
+                </button>
+              </div>
+              <div id="myNav" class="overlay">
+                <div class="overlay-content">
+                  <a href="/">HOME</a>
+                  <a href="/services">SERVICES</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- end header section -->
+    </div>
+
+
+
+    <!-- contact section -->
+    <section class="contact_section layout_padding">
+      <div class="container">
+        <h2 class="">
+          Masukkan Foto Sampah
+        </h2>
+        <p>
+          Sampah Anorganik : Botol Kaca, Botol Plastik, Kaleng, Kertas, Kardus
+        </p>
+        <p>
+          Sampah B3 : Baterai Handphone, Baterai Laptop
+        </p>
+      </div>
+      <div class="container my-5">
+        <div class="row justify-content-center">
+          <form action="/submit" method="post" enctype="multipart/form-data">
+            <div class="contact_form-container">
+              <div style="margin-bottom: 25px;">
+                <label for="gambar " class="pb-2 m-0">Masukkan Gambar</label>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="gambar" name="gambar">
+                  <label class="custom-file-label m-0" for="gambar">Choose file</label>
+                </div>
+                <small id="gambar" class="form-text text-muted">Disarankan gambar Background putih/PNG</small>
+              </div>
+              <div class="mt-2 text-center">
+                <button type="submit">
+                  Send
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="row mt-5 justify-content-center">
+          {% if prediction %}
+          <img src="{{img_path}}" class="mb-4" height="400px" width="400px">
+          <h2 class="text-justify"> Hasil : <i> {{prediction}} </i> <a href="{{link}}" target="_blank">Klik link ini </a></h2>
+          {% endif %}
+        </div>
+      </div>
+
+
+    </section>
+    <!-- end contact section -->
+
+
+    <!-- info section -->
+
+    <!-- end info section -->
+    <!-- <hr class="footer_hr"> -->
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+
+
+    <script>
+      function openNav() {
+        document.getElementById("myNav").classList.toggle("menu_width")
+        document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+      }
+    </script>
+
+
+  </body>
+
+</html>
